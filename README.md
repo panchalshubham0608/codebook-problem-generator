@@ -1,7 +1,7 @@
 # CodeBook - Problem Generator
 This app is used to generate problems for CodeBook application.  
 The following shows the template for code-generation
-```json
+```
 {
 	"title": "...",
 	"description": "...",
@@ -33,7 +33,7 @@ The following shows the template for code-generation
 ## Examples
 The following examples will help you understand the outcomes.
 1. The following problem is about creating a `Hello World!` program.
-```json
+```
 {
     "title": "Hello World!",
     "description": "Write a program to display text `Hello World!`",
@@ -52,7 +52,7 @@ The following examples will help you understand the outcomes.
 ```
 
 2. The following problem is about writing a program that sums two numbers.
-```json
+```
 {
     "title": "Add two numbers",
     "description": "Your task is to complete the function `add_two` which takes two integers and returns their sum.",
