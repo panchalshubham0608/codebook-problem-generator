@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# CodeBook - Problem Generator
+This app is used to generate problems for CodeBook application.  
+The following shows the template for code-generation
+```json
+{
+	"title": "...",
+	"description": "...",
+	"test_cases": [
+		{
+			"input": "...",
+			"output": "...",
+			"points": ...,
+			"timeout": "...",
+			"locked": [true/false]
+		},
+		...
+	],
+	"supported_languages": [
+		"c",
+		"cpp",
+		"java",
+		"python"
+	],
+	"templates": [
+		"c": "...",
+		"cpp": "...",
+		"java": "...",
+		"python": "...",
+	]
+}
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Examples
+The following examples will help you understand the outcomes.
+1. The following problem is about creating a `Hello World!` program.
+```json
+{
+    "title": "Hello World!",
+    "description": "Write a program to display text `Hello World!`",
+    "test_cases":  [
+        {
+            "input": "",
+            "output": "Hello World!",
+            "points": 2,
+            "timeout": 1000,
+            "locked": false
+        }
+    ],
+    "supported_languages": ["c","cpp"],
+    "templates": []
+}
+```
 
-## Available Scripts
+2. The following problem is about writing a program that sums two numbers.
+```json
+{
+    "title": "Add two numbers",
+    "description": "Your task is to complete the function `add_two` which takes two integers and returns their sum.",
+    "test_cases": [
+        {
+            "input": "2 3",
+            "output": "5",
+            "points": 2, 
+            "timeout": 1000,
+            "locked": false
+        },
+        {
+            "input": "0 2",
+            "output": "2",
+            "points": 3, 
+            "timeout": 1000,
+            "locked": true
+        },
+    ],
+    "supported_languages": ["c"],
+    "templates": [
+        "c": "
+            #include <stdio.h>
+            int add_two(int a, int b){
+                // write your code here
+            }
+            int main() {
+                int a, b;
+                scanf("%d%d", &a, &b);
+                printf("%d\n", add_two(a, b));
+                return 0;
+            }
+        ",
+    ]
+}
+```
 
-In the project directory, you can run:
+## Need help?
+Please feel free to write your queries to [shubhampanchal9773@gmail.com](mailto:shubhampanchal9773@gmail.com), I'll be happy to assist you :)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
