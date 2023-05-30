@@ -36,11 +36,11 @@ export default function TestCase(props) {
                         } />
                     </div>
                     <div className='col'>
-                        <label htmlFor={`${index}_points`} className="form-label mr-1">Points</label>
-                        <input type="number" className="form-control col mr-1" id={`${index}_points`} placeholder="Points" value={testCase.points}
+                        <label htmlFor={`${index}_score`} className="form-label mr-1">Score</label>
+                        <input type="number" className="form-control col mr-1" id={`${index}_score`} placeholder="Score" value={testCase.score}
                             onChange={event => updateTestCase(index, {
                                 ...testCase,
-                                points: event.target.value,
+                                score: event.target.value,
                             })
                         } />
                     </div>

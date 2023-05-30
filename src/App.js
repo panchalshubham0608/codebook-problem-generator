@@ -12,7 +12,7 @@ export default function App() {
 	const [testCases, setTestCases] = React.useState([{
 		"input": "",
 		"output": "",
-		"points": 2.0,
+		"score": 2.0,
 		"timeout": 1000, // in milliseconds
 		"locked": false,
 	}]);
@@ -36,7 +36,7 @@ export default function App() {
 		setTestCases([...testCases, {
 			"input": "",
 			"output": "",
-			"points": 2.0,
+			"score": 2.0,
 			"timeout": 1000, // in milliseconds
 			"locked": false,
 		}]);

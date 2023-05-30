@@ -9,7 +9,7 @@ The following shows the template for code-generation
 		{
 			"input": "...",
 			"output": "...",
-			"points": ...,
+			"score": ...,
 			"timeout": "...",
 			"locked": [true/false]
 		},
@@ -41,7 +41,7 @@ The following examples will help you understand the outcomes.
         {
             "input": "",
             "output": "Hello World!",
-            "points": 2,
+            "score": 2,
             "timeout": 1000,
             "locked": false
         }
@@ -60,14 +60,14 @@ The following examples will help you understand the outcomes.
         {
             "input": "2 3",
             "output": "5",
-            "points": 2, 
+            "score": 2, 
             "timeout": 1000,
             "locked": false
         },
         {
             "input": "0 2",
             "output": "2",
-            "points": 3, 
+            "score": 3, 
             "timeout": 1000,
             "locked": true
         },
