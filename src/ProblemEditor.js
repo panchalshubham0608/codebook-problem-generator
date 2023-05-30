@@ -1,43 +1,30 @@
 import React from "react";
-import MDEditor from '@uiw/react-md-editor';
-import { getCodeString } from 'rehype-rewrite';
-import katex from 'katex';
-import 'katex/dist/katex.css';
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import 'katex/dist/katex.min.css'
 
 export default function ProblemEditor(props) {
     const { description, setDescription } = props;
+
+    // specify toolbar options
+    const modules = React.useMemo(() => ({
+        toolbar: [
+            [{ 'header': [1, 2, 3, 4, false] }],
+            ['bold', 'italic', 'underline', 'strike', { 'color': [] }, { 'background': [] }],
+            ['code-block', 'formula', 'image', 'link', 'blockquote'],
+            [{ 'script': 'sub' }, { 'script': 'super' }],
+            [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+            [{ 'indent': '-1' }, { 'indent': '+1' }],
+            ['clean'],
+        ],
+        syntax: true,
+        formula: true,        
+    }), []);
+
     return (
-        <MDEditor
-            value={description}
-            onChange={setDescription}
-            previewOptions={{
-                components: {
-                    code: ({ inline, children = [], className, ...props }) => {
-                        const txt = children[0] || '';
-                        if (inline) {
-                            if (typeof txt === 'string' && /^\$\$(.*)\$\$/.test(txt)) {
-                                const html = katex.renderToString(txt.replace(/^\$\$(.*)\$\$/, '$1'), {
-                                    throwOnError: false,
-                                });
-                                return <code dangerouslySetInnerHTML={{ __html: html }} />;
-                            }
-                            return <code>{txt}</code>;
-                        }
-                        const code = props.node && props.node.children ? getCodeString(props.node.children) : txt;
-                        if (
-                            typeof code === 'string' &&
-                            typeof className === 'string' &&
-                            /^language-katex/.test(className.toLocaleLowerCase())
-                        ) {
-                            const html = katex.renderToString(code, {
-                                throwOnError: false,
-                            });
-                            return <code style={{ fontSize: '150%' }} dangerouslySetInnerHTML={{ __html: html }} />;
-                        }
-                        return <code className={String(className)}>{txt}</code>;
-                    },
-                },
-            }}
-        />
+        <>
+            <ReactQuill theme="snow" value={description} onChange={setDescription}
+                modules={modules} />
+        </>
     );
 }
