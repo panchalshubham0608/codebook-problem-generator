@@ -7,12 +7,12 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 export default function TestCase(props) {
     const {index, testCase, updateTestCase, deleteTestCase} = props;
     return (
-        <div className='border rounded mb-3 p-3'>
+        <div className='border rounded mb-3 p-3 test-case'>
             <div className='d-flex justify-content-between'>
                 <div>
                     <div className='d-flex align-items-center'>
-                        <p className='m-0'>Test Case {index + 1}</p>
-                        <button className='btn' onClick={() => deleteTestCase(index)}>
+                        <h5 className='m-0'>Test Case {index + 1}</h5>
+                        <button className='btn btn-danger rounded-circle ml-3' onClick={() => deleteTestCase(index)}>
                             <FontAwesomeIcon icon={faTrash} />
                         </button>
                     </div>

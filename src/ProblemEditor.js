@@ -24,7 +24,7 @@ export default function ProblemEditor(props) {
     return (
         <>
             <ReactQuill theme="snow" value={description} onChange={setDescription}
-                modules={modules} />
+                modules={modules} placeholder="Write your problem description here" />
         </>
     );
 }

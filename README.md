@@ -1,5 +1,5 @@
 # CodeBook - Problem Generator
-This app is used to generate problems for CodeBook application.  
+[This app](https://panchalshubham0608.github.io/codebook-problem-generator/) is used to generate problems for [CodeBook application](https://github.com/panchalshubham0608/codebook/pkgs/container/codebook).  
 The following shows the template for code-generation
 ```
 {
@@ -19,13 +19,13 @@ The following shows the template for code-generation
 		"c",
 		"cpp",
 		"java",
-		"python"
+		"py"
 	],
 	"templates": [
 		"c": "...",
 		"cpp": "...",
 		"java": "...",
-		"python": "...",
+		"py": "...",
 	]
 }
 ```
