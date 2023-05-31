@@ -21,12 +21,12 @@ The following shows the template for code-generation
 		"java",
 		"py"
 	],
-	"templates": [
+	"templates": {
 		"c": "...",
 		"cpp": "...",
 		"java": "...",
 		"py": "...",
-	]
+    }
 }
 ```
 
@@ -47,7 +47,7 @@ The following examples will help you understand the outcomes.
         }
     ],
     "supported_languages": ["c","cpp"],
-    "templates": []
+    "templates": {}
 }
 ```
 
@@ -100,23 +100,13 @@ The following examples will help you understand the outcomes.
             "locked": true
         }
     ],
-    "templates": [
-        {
-            "c": "#include <stdio.h>\nint main() {\n    // your code goes here\n    return 0;\n}"
-        },
-        {
-            "cpp": "#include <iostream>\nusing namespace std;\nint main() {\n    // your code goes here\n    return 0;\n}"
-        },
-        {
-            "py": "# your code goes here"
-        },
-        {
-            "java": "public class Main {\n    public static void main(String[] args) {\n        // your code goes here\n    }\n}"
-        },
-        {
-            "js": "// your code goes here"
-        }
-    ]
+    "templates": {
+        "c": "#include <stdio.h>\nint main() {\n    // your code goes here\n    return 0;\n}",
+        "cpp": "#include <iostream>\nusing namespace std;\nint main() {\n    // your code goes here\n    return 0;\n}",
+        "py": "# your code goes here",
+        "java": "public class Main {\n    public static void main(String[] args) {\n        // your code goes here\n    }\n}",
+        "js": "// your code goes here"
+    }
 }
 ```
 

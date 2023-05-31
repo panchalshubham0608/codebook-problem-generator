@@ -125,16 +125,16 @@ export default function Editor() {
         }
 
         // construct the JSON
+        let templates = {};
+        for (const lang of supportedLanguages) {
+            templates[lang.language] = lang.template;
+        }
         const problem = {
             "title": title,
             "description": description,
             "supported_languages": supportedLanguages.map(lang => lang.language),
             "test_cases": testCases,
-            "templates": supportedLanguages.map(lang => { 
-                let obj = {};
-                obj[lang.language] = lang.template;
-                return obj;
-            }),
+            "templates": templates,
         };
 
         // if encryption key is not empty, encrypt the JSON        
