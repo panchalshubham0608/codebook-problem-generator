@@ -4,7 +4,7 @@ import Homepage from "./Homepage";
 import Editor from "./Editor";
 
 export default function App() {
-	const [showEditor, setShowEditor] = React.useState(true);
+	const [showEditor, setShowEditor] = React.useState(false);
 
 	// construct the UI
 	return (
