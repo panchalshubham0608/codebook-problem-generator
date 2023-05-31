@@ -1,5 +1,5 @@
 # CodeBook - Problem Generator
-This app is used to generate problems for CodeBook application.  
+[This app](https://panchalshubham0608.github.io/codebook-problem-generator/) is used to generate problems for [CodeBook application](https://github.com/panchalshubham0608/codebook/pkgs/container/codebook).  
 The following shows the template for code-generation
 ```
 {
@@ -19,13 +19,13 @@ The following shows the template for code-generation
 		"c",
 		"cpp",
 		"java",
-		"python"
+		"py"
 	],
 	"templates": [
 		"c": "...",
 		"cpp": "...",
 		"java": "...",
-		"python": "...",
+		"py": "...",
 	]
 }
 ```
@@ -55,37 +55,67 @@ The following examples will help you understand the outcomes.
 ```
 {
     "title": "Add two numbers",
-    "description": "Your task is to complete the function `add_two` which takes two integers and returns their sum.",
+    "description": "Write a program to input two numbers from user and print their sum",
+    "supported_languages": [
+        "c",
+        "cpp",
+        "py",
+        "java",
+        "js"
+    ],
     "test_cases": [
         {
-            "input": "2 3",
-            "output": "5",
-            "score": 2, 
+            "input": "1 2\n",
+            "output": "3\n",
+            "score": 2,
             "timeout": 1000,
             "locked": false
         },
         {
-            "input": "0 2",
-            "output": "2",
-            "score": 3, 
+            "input": "2 3\n",
+            "output": "5\n",
+            "score": 2,
+            "timeout": 1000,
+            "locked": false
+        },
+        {
+            "input": "50 20\n",
+            "output": "70\n",
+            "score": 2,
+            "timeout": 1000,
+            "locked": false
+        },
+        {
+            "input": "100 100\n",
+            "output": "200\n",
+            "score": 2,
             "timeout": 1000,
             "locked": true
         },
+        {
+            "input": "0 0\n",
+            "output": "0\n",
+            "score": 2,
+            "timeout": 1000,
+            "locked": true
+        }
     ],
-    "supported_languages": ["c"],
     "templates": [
-        "c": "
-            #include <stdio.h>
-            int add_two(int a, int b){
-                // write your code here
-            }
-            int main() {
-                int a, b;
-                scanf("%d%d", &a, &b);
-                printf("%d\n", add_two(a, b));
-                return 0;
-            }
-        ",
+        {
+            "c": "#include <stdio.h>\nint main() {\n    // your code goes here\n    return 0;\n}"
+        },
+        {
+            "cpp": "#include <iostream>\nusing namespace std;\nint main() {\n    // your code goes here\n    return 0;\n}"
+        },
+        {
+            "py": "# your code goes here"
+        },
+        {
+            "java": "public class Main {\n    public static void main(String[] args) {\n        // your code goes here\n    }\n}"
+        },
+        {
+            "js": "// your code goes here"
+        }
     ]
 }
 ```
