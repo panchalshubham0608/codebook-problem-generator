@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/codebook-problem-generator/static/css/main.51a3ab8b.css",
-    "main.js": "/codebook-problem-generator/static/js/main.c39e35bc.js",
+    "main.js": "/codebook-problem-generator/static/js/main.240efab1.js",
     "static/js/787.ac05c80f.chunk.js": "/codebook-problem-generator/static/js/787.ac05c80f.chunk.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/codebook-problem-generator/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/codebook-problem-generator/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -66,11 +66,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/codebook-problem-generator/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/codebook-problem-generator/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "main.51a3ab8b.css.map": "/codebook-problem-generator/static/css/main.51a3ab8b.css.map",
-    "main.c39e35bc.js.map": "/codebook-problem-generator/static/js/main.c39e35bc.js.map",
+    "main.240efab1.js.map": "/codebook-problem-generator/static/js/main.240efab1.js.map",
     "787.ac05c80f.chunk.js.map": "/codebook-problem-generator/static/js/787.ac05c80f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51a3ab8b.css",
-    "static/js/main.c39e35bc.js"
+    "static/js/main.240efab1.js"
   ]
 }
