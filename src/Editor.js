@@ -25,6 +25,8 @@ export default function Editor() {
     // reconstruct the editor design
     useEffect(() => {
         document.body.style.background = "white";
+        // confirm before leaving
+        window.onbeforeunload = () => true;
     }, []);
 
     // construct the mode for ace editor from language
